@@ -79,7 +79,8 @@ def commande(arg):
 		'1'	: go_ahead,
 		'2' : go_reverse,
 		'3' : turn_left,
-		'4' : turn_right
+		'4' : turn_right,
+		'5' : go_ahead
 		}
 	if arg in options:
         options[arg]()
@@ -90,4 +91,4 @@ def commande(arg):
 # Main programm
 if __name__ == "__main__":
 		commande(sys.argv[1])
-		
+
