@@ -23,7 +23,7 @@ pin_IN2 = 22
 pin_IN3 = 23
 pin_IN4 = 24
 GPIO.setup(pin_PWM, GPIO.OUT, initial = GPIO.LOW)
-p = GPIO.PWM(channel, frequence)
+p = GPIO.PWM(pin_PWM, frequence_PWM)
 		
 # Initialisation du programme de commande
 def init():
@@ -82,13 +82,11 @@ def commande(arg):
 		'3' : turn_left,
 		'4' : turn_right
 		}
-	if arg in options:
-        options[arg]()
-    else:
-        print 'Pas trouvé la fonction demandée!'
+    options[arg]()
 		
 	
 # Main programm
 if __name__ == "__main__":
+		init()
 		commande(sys.argv[1])
 
