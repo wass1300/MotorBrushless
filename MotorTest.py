@@ -12,7 +12,7 @@ import sys #récupérer arguments
 # L     X     X      stop
 # ------------------------------
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(pin_PWM, GPIO.OUT, initial = GPIO.LOW)
+
 	
 # Variables locales des données initiales du système
 frequence_PWM = 200
@@ -22,6 +22,7 @@ pin_IN1 = 27
 pin_IN2 = 22
 pin_IN3 = 23
 pin_IN4 = 24
+GPIO.setup(pin_PWM, GPIO.OUT, initial = GPIO.LOW)
 p = GPIO.PWM(channel, frequence)
 		
 # Initialisation du programme de commande
@@ -79,8 +80,7 @@ def commande(arg):
 		'1'	: go_ahead,
 		'2' : go_reverse,
 		'3' : turn_left,
-		'4' : turn_right,
-		'5' : go_ahead
+		'4' : turn_right
 		}
 	if arg in options:
         options[arg]()
