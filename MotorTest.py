@@ -5,7 +5,7 @@ import sys #récupérer arguments
 # Commandes du moteur
 # EN    IN1   IN2    RESULTAT
 # ------------------------------
-# PWM   H     L      tout droit
+# PWM   H  L      tout droit
 # PWM   L     H      sens inverse
 # PWM   L     L      stop
 # PWM   H     H      stop
